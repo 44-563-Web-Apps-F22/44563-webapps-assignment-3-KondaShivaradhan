@@ -42,7 +42,59 @@
             Ramamandi gurudwara
         </li>
     </ul>
-<a href="./aboutme.html">About Me</a>
+    <a href="./aboutme.html">About Me</a>
+    <hr>
+    <h1>Recomendations of Cities</h1>
+    The below table contains citie and their respective information about why i recommand it for a visit.
+    <table>
+        <tr>
+            <th>City</th>
+            <th>Place to see</th>
+            <th> Time constrains</th>
+        </tr>
+        <tr>
+            <td>Chandigard</td>
+            <td>Water Park</td>
+            <td>4hrs</td>
+        </tr>
+        <tr>
+            <td>Amritsar</td>
+            <td> Golden Temple</td>
+            <td>1hr</td>
+        </tr>
+        <tr>
+            <td>Patiala</td>
+            <td>Old heritage</td>
+            <td>2hrs</td>
+        </tr>
+        <tr>
+            <td>phatankot</td>
+            <td> Military exibition</td>
+            <td>1hr</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>Code Snippet</h1>
+    <blockquote>
+        get first image from wordpress post
+    </blockquote>
+    <pre>
+        function catch_that_image() {
+            global $post, $posts;
+            $first_img = '';
+            ob_start();
+            ob_end_clean();
+            $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
+            $first_img = $matches[1][0];
+          
+            if(empty($first_img)) {
+              $first_img = "/path/to/default.png";
+            }
+            return $first_img;
+          }
+    </pre>
+    <a href="https://stackoverflow.com/questions/18544915/get-first-image-from-wordpress-post">Stack over Flow link</a>
+    <a href="https://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post/">Css Snippetes link</a>
 </body>
 
 </html>
